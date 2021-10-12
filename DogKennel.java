@@ -14,7 +14,7 @@ offSpring fra neden - dvs tjek hvor de tomme pladser starter. Dernæst skal den
 også tage højde for at hunden faktisk kan få flere hvalpe end først antaget i
 konstruktøren (så noget med at bruge Arrays.copyOf-metoden hvis det oprindelige
 array er fyldt op)
-EXTRA OPGAVE (vi har endnu ikke haft om komposition)
+EXTRA OPGAVE 
 4) Ændre i hunde-klassen så ejeren ikke længere er type String men typen Owner
 (som altså er en klasse der skal laves fra bunden). Dvs flg skal skiftes:
 private String ejer;

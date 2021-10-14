@@ -24,31 +24,29 @@ private ArrayList<String> offSpring; bliver til
 private ArrayList <Dog> offSpring;
 7) lav en metode der kan printe navnene på en hund's hvalpe.
 
-
 */
-import java.util.Arrays;
 public class DogKennel {
 	public static void main(String[] args) {
-		//TODO:
-		// lav en ny hund
-		Dog myDog = new Dog("woodie", true);
+
+		//TODO lav en ny hund
+		Dog myDog = new Dog("Woodie", true);
+		Owner thatOwner = new Owner("Per");
+
 		// sæt en ejer
-		myDog.setOwner("Henning");
+		myDog.setOwner(thatOwner);
+
+		myDog.feedDog();
+
 		// TODO: tilføj to hvalpe når hundeklassen er klar til hvalpe
-		myDog.setOffSpring("woodiesnoopie");
-		myDog.setOffSpring("woodiesfido");
+		Dog myDogOff1 = new Dog("Woodiesnoopie", false);
+		Dog myDogOff2 = new Dog("Woodiesfido", false);
+		myDog.setOffSpring(myDogOff1);
+		myDog.setOffSpring(myDogOff2);
 		
 		// print alle hvalpe
-		ArrayList <String> myOff = myDog.getOffSpring();
-		for (String myD: myOff) {
-			System.out.println(myD);
-		}
-		
+		myDog.getOffSpring();
+
 		// print ejeren
-		System.out.println("min hund er ejet af " + myDog.getOwner());
-		// TODO: fodr hunden når hundeklassen er modificeret så den kan fodres
-		String resString = myDog.feedDog();
-		System.out.println(resString);
+		System.out.println("Min hund " + myDog.getName() + " er ejet af " + myDog.getOwner());
 	}
-	
 }
